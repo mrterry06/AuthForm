@@ -1,0 +1,19 @@
+<div class="container" ng-controller="myCtrl">
+
+	<h1 class="col col-md-offset-2 col-md-4">Sign In/Sign Up</h1>
+
+	<input class="form-control" ng-model="log.user" placeholder="Username">
+		   
+	<input type="password" class="form-control"  ng-model="log.pass" placeholder="Password">
+	<button class="btn btn-success" ng-click="Store()">Sign up</button>
+	<button class="btn btn-warning" ng-click="compare()">Log In</button>
+
+	<h1>Testing The Database Password/Using Bcrypt with mongojs</h1>
+		<ul ng-repeat='log in logs'>
+			<li>{{ log.user }}</li>
+			<li>{{ log.pass }}</li>
+			<li><button class="btn btn-defaul" ng-click="remove(log._id)">remove</button></li>
+		</ul>
+
+		{{ there }}
+	</div>
